@@ -1,0 +1,22 @@
+FUNCTION insertsort(array : ARRAY_OF integer[length];) : ARRAY_OF INTEGER
+VAR
+    i,j, X : integer ;
+BEGIN
+ FOR i FROM 0 TO array.length-1   DO
+ 
+    FOR j=i  TO array[i] STEP -1  DO
+
+IF ( array[j-1]> array[j]) Then
+
+    X := array[i];
+    array[i] := array[j-1];
+    array[j-1 ]:= X 
+
+    ELSE
+        RETURN(error);
+   
+      END_IF
+    END_FOR
+ END_FOR
+    RETURN array[];
+END
